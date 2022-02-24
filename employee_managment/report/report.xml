@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="report_employee_card" model="ir.actions.report">
+        <field name="name">Employee Identity</field>
+        <field name="model">id.card</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">employee_managment.employee_report_id_card</field>
+        <field name="report_file">employee_managment.employee_report_id_card</field>
+        <field name="binding_model_id" ref="model_id_card"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!--<record id="report_employee_xls" model="ir.actions.report">
+        <field name="name">Employee Card Excel</field>
+        <field name="model">id.card</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">employee_managment.report_card_xls</field>
+        <field name="report_file">employee_managment.report_card_xls</field>
+        <field name="binding_model_id" ref="model_id_card"/>
+        <field name="binding_type">report</field>
+    </record>-->
+
+</odoo>

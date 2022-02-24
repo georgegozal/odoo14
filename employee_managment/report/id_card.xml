@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <template id="employee_report_id_card">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Employee ID</h2>
+                        <h2><span t-field="o.reference"/></h2>
+                        <img t-if="o.image" t-att-src="'data:image/png;base64,%s' % to_text(o.image)" 
+                        height="160" border="1" width="120"/>
+                        <p>Name: <span t-field="o.name"/></p>
+                        <p>Last name: <span t-field="o.surname"/></p>
+                        <p>ID no: <span t-field="o.id_no"/></p>
+                        <p>Gender: <span t-field="o.sex"/></p>
+                        <p>Birth place: <span t-field="o.birth_place"/></p>
+                        <p>Birth Date: <span t-field="o.birth_date"/></p>
+                        <p>Department: <span t-field="o.department_id"/></p>
+                        <p>Features: <span t-field="o.features_ids"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>    
