@@ -50,8 +50,7 @@ class EmployeeIdData(models.Model):
     #photo = fields.Image(string="Photo",required=False,tracking=True,)
     #                            max_width=480,max_height=680)
     image = fields.Binary(string="Photo",required=False,tracking=True)
-    department_id = fields.Many2one(comodel_name='id.department',delegate=True,ondelete='restrict', select=True,
-                                    string='Department')
+    department_id = fields.Many2one(comodel_name='id.department',ondelete='set null',string='Department')
 
     features_ids = fields.Many2many('id.features',string='Features',ondelete='restrict')
 
